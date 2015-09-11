@@ -6,6 +6,8 @@ class System:
         self.MODE = 'GLOBAL'
         #self.mode = 'LOCAL'
 
+        self.PORT = 57110
+
         if self.MODE == 'GLOBAL':
             print("MODE: GLOBAL")
             self.send_ip = '224.0.0.1'

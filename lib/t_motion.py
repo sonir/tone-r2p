@@ -7,7 +7,7 @@ class Motion:
         print 'motion instanciated.'
         #Set Basic Variables
         self.pre_acc = 0 #for strage previous acc
-        self.low_pass = 0.03 #0.05
+        self.low_pass = 0.025 #0.03, 0.05
         self.diff_total = 0
         self.one_rotation = 3.14
         self.rotation = self.one_rotation * 10 #7.52
