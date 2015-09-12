@@ -4,7 +4,7 @@ class System:
     def __init__ (self):
         #send mode
         self.MODE = 'GLOBAL'
-        #self.mode = 'LOCAL'
+        #self.MODE = 'LOCAL'
 
         self.PORT = 57110
 
