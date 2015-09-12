@@ -3,8 +3,8 @@ class System:
 
     def __init__ (self):
         #send mode
-        #self.MODE = 'GLOBAL'
-        self.MODE = 'LOCAL'
+        self.MODE = 'GLOBAL'
+        #self.MODE = 'LOCAL'
 
         self.PORT = 57110
 

@@ -73,31 +73,31 @@ class Sampler:
     def update_spd(self, val):
         if self.SEG1 >= val :
             self.sp = self.SP1
-            print("SEG1" , val)
+            #print("SEG1" , val)
         elif self.SEG2 >= val :
             self.sp = self.SP2
-            print("SEG2" , val)
+            #print("SEG2" , val)
         elif self.SEG3 >= val :
             self.sp = self.SP3
-            print("SEG3" , val)
+            #print("SEG3" , val)
         elif self.SEG4 >= val :
             self.sp = self.SP4
-            print("SEG4" , val)
+            #print("SEG4" , val)
         elif self.SEG5 >= val :
             self.sp = self.SP5
-            print("SEG5" , val)
+            #print("SEG5" , val)
         elif self.SEG6 >= val :
             self.sp = self.SP6
-            print("SEG6" , val)
+            #print("SEG6" , val)
         elif self.SEG7 >= val :
             self.sp = self.SP7
-            print("SEG7" , val)
+            #print("SEG7" , val)
         elif self.SEG8 >= val :
             self.sp = self.SP8
-            print("SEG8" , val)
+            #print("SEG8" , val)
         elif self.SEG8 < val :
             self.sp = self.SP9
-            print("SEG9" , val)
+            #print("SEG9" , val)
 
         self.osc.send("/s/scratch",self.sp)
 
