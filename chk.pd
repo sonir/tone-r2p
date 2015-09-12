@@ -1,0 +1,13 @@
+#N canvas 328 400 736 445 10;
+#X obj 75 -244 dac~;
+#X obj 77 -315 osc~ 440;
+#X msg 227 -273 \; pd dsp 1;
+#X obj 203 -332 loadbang;
+#X text 197 -362 Turn DSP on when Pd turns on;
+#X obj 203 -304 delay 1000;
+#X obj 203 -231 print pd::DSP_Started;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 3 0 5 0;
+#X connect 5 0 2 0;
+#X connect 5 0 6 0;
