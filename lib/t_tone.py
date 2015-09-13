@@ -32,8 +32,8 @@ class Tone :
 
         self.sampler.update(self.motion.speed)
 
-        if self.sampler.rec_state :
-            if self.metro.update():
+        if self.metro.update():
+            if self.sampler.rec_state :
                 io.blink()
-        else:
-            io.led_on()
+            else:
+                io.led_on()
