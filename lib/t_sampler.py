@@ -15,8 +15,8 @@ class Sampler:
         self.SEG4 = 0.02 #x0.66(AVG.L)
         self.SEG5 = 0.10#x1(AVG_H)  0.015
         self.SEG6 = 0.4 #x1.5
-        self.SEG7 = 0.7 #x2
-        self.SEG8 = 1.2 #x2.6 more:x5
+        self.SEG7 = 0.6 #x2
+        self.SEG8 = 1.0 #x2.6 more:x5
         self.SP1 = 0.0
         self.SP2 = 0.2
         self.SP3 = 0.5
