@@ -14,7 +14,7 @@ class Tone :
         # Sampler Instanciate
         self.sampler = t_sampler.Sampler(self.system)
         #Instanciate Timer Named metro
-        self.metro = t_metro.Metro(0.5)
+        self.metro = t_metro.Metro(0.2)
         #INIT Modules
         self.motion.setup()
         io.setup()
