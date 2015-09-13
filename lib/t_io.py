@@ -10,7 +10,7 @@ LED_L = 11
 LED_R = 13
 # State Variable
 bt_state = 0
-
+blinker = false
 
 def setup():
     #Setup GPIOS
@@ -36,3 +36,18 @@ def led_on():
 def led_off():
     GPIO.output(LED_L, False)
     GPIO.output(LED_R, False)
+
+def blink():
+    global blinker
+    blinker = ~blinker
+    GPIO.output(LED_L, blinker)
+    GPIO.output(LED_R, blinker)
+
+    # if blinker:
+    #     GPIO.output(LED_L, True)
+    #     GPIO.output(LED_R, True)
+    #
+    # else:
+    #     print("NULL")
+    # GPIO.output(LED_L, False)
+    # GPIO.output(LED_R, False)

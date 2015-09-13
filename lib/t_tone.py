@@ -1,4 +1,4 @@
-import t_motion, t_sampler
+import t_motion, t_sampler, t_metro
 import t_io as io
 import setup
 
@@ -13,6 +13,8 @@ class Tone :
         self.system = setup.System()
         # Sampler Instanciate
         self.sampler = t_sampler.Sampler(self.system)
+        #Instanciate Timer Named metro
+        self.metro = t_metro.Metro(0.5)
         #INIT Modules
         self.motion.setup()
         io.setup()
@@ -29,3 +31,9 @@ class Tone :
             self.sampler.rec_off()
 
         self.sampler.update(self.motion.speed)
+
+        if self.sampler.rec_state :
+            if self.metro.update():
+                io.blink()
+        else:
+            io.led_on()
