@@ -1,0 +1,6 @@
+alias pdex='sudo pd-extended -nogui -alsa -audioindev 3 -audiooutdev 3 sampler.pd &'
+#alias pdex='sudo pd-extended -nogui -alsa -audioindev 3 -audiooutdev 3 /home/pi/tone/tone.py &'
+alias pdex1='sudo pd-extended -nogui -alsa -audioindev 1 -audiooutdev 1 /home/pi/tone/tone.py &'
+alias pdex2='sudo pd-extended -nogui -alsa -audioindev 2 -audiooutdev 2 /home/pi/tone/tone.py &'
+alias tone='sudo python /home/pi/tone/tone.py'
+
