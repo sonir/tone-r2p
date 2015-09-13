@@ -10,7 +10,7 @@ LED_L = 11
 LED_R = 13
 # State Variable
 bt_state = 0
-blinker = false
+blinker = False
 
 def setup():
     #Setup GPIOS
