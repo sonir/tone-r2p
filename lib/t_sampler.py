@@ -109,3 +109,7 @@ class Sampler:
             else :
                 # self.stop()
                 pass
+
+
+    def count_round (self):
+        self.osc.send("/round/count" , 1)

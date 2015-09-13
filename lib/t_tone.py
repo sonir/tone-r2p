@@ -22,8 +22,10 @@ class Tone :
 
     def update(self):
         self.motion.update()
+        if self.motion.isRotate == 1 :
+                self.sampler.count_round()
+
         io.update()
-        # print(io.get_bt_state())
 
         if io.get_bt_state() == 1 :
             self.sampler.rec_on()
