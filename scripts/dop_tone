@@ -1,6 +1,0 @@
-alias config='sudo raspi-config'
-alias vol='alsamixer'
-alias pdd='sudo pd-extended -nogui -alsa -audioindev 3 -audiooutdev 3'
-alias pk='sudo killall pd-extended'
-
-
