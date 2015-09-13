@@ -1,0 +1,13 @@
+#Alias Apps
+alias pdex='sudo pd-extended -nogui -alsa -audioindev 3 -audiooutdev 3 /home/pi/tone/sampler.pd &'
+alias pdex1='sudo pd-extended -nogui -alsa -audioindev 1 -audiooutdev 1 /home/pi/tone/sampler.pd &'
+alias pdex2='sudo pd-extended -nogui -alsa -audioindev 2 -audiooutdev 2 /home/pi/tone/sampler.pd &'
+alias tone='sudo python /home/pi/tone/tone.py'
+
+#Alias for Maintainance
+alias toneboot 'pdex;tone;'
+alias pk='sudo killall pd-extended'
+alias config='sudo raspi-config'
+alias vol='alsamixer'
+alias pdd='sudo pd-extended -nogui -alsa -audioindev 3 -audiooutdev 3'
+alias pk='sudo killall pd-extended'
