@@ -1,4 +1,4 @@
-#N canvas 124 479 1309 691 10;
+#N canvas 294 64 1309 691 10;
 #X obj 57 40 dumpOSC 57110;
 #X msg 711 247 \; pd dsp 1;
 #X obj 689 154 loadbang;
@@ -372,7 +372,7 @@
 #X text 690 173 Initial freq;
 #X floatatom 932 207 5 0 0 0 - - -;
 #X obj 77 29 inlet;
-#X obj 78 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 78 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 78 85 + 1;
 #X text 975 209 intensity;
@@ -408,7 +408,7 @@
 #X connect 25 0 3 1;
 #X restore 82 414 pd sound_mill;
 #X text 65 335 on/off;
-#X obj 81 370 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 81 370 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 85 464 5 0 0 0 - - -;
 #X floatatom 123 365 5 0 0 0 - - -;
@@ -487,7 +487,7 @@
 #X connect 6 0 7 0;
 #X connect 6 0 8 0;
 #X restore 598 361 pd ef;
-#N canvas 716 39 1029 880 round_mng 1;
+#N canvas 476 70 1029 880 round_mng 1;
 #X obj 337 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 336 227 count;
@@ -524,7 +524,7 @@
 #X obj 186 237 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 184 283 0;
-#X obj 209 363 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 209 363 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 222 437 outlet;
 #X floatatom 319 32 5 0 0 0 - - -;
@@ -542,7 +542,7 @@
 #X connect 10 0 2 1;
 #X connect 11 0 2 0;
 #X restore 505 568 pd threath_bool;
-#X obj 614 676 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 614 676 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 129 559 450 300 rev_subtr 0;
 #X obj 143 52 inlet;
@@ -576,7 +576,7 @@
 #X msg 100 154 1;
 #X obj 175 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 89 188 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 89 188 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 506 369 5 0 0 0 - - -;
 #X obj 176 63 route /round/count /round/reset /round/gate /round/limit
@@ -591,6 +591,59 @@
 #X text 546 318 <<< def val;
 #X msg 508 319 0.5;
 #X msg 446 163 150;
+#N canvas 843 332 503 465 counter 1;
+#X obj 107 123 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 120 312 5 0 0 0 - - -;
+#X msg 198 244 0;
+#X msg 114 207 1;
+#X obj 115 261 +;
+#X obj 124 65 inlet;
+#X obj 278 62 inlet;
+#X floatatom 251 245 5 0 0 0 - - -;
+#X floatatom 296 120 5 0 0 0 - - -;
+#X obj 124 398 outlet;
+#X text 116 30 increment;
+#X obj 207 343 >=;
+#X obj 219 431 outlet;
+#X obj 304 296 print;
+#X obj 161 351 t i i;
+#X text 275 36 set num=max;
+#X obj 386 66 inlet;
+#X text 388 49 reset;
+#X obj 373 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 327 369 5 0 0 0 - - -;
+#X obj 217 382 sel 1;
+#X obj 216 407 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 3 0;
+#X connect 1 0 9 0;
+#X connect 1 0 14 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 11 1;
+#X connect 7 0 13 0;
+#X connect 8 0 7 0;
+#X connect 11 0 20 0;
+#X connect 14 0 11 0;
+#X connect 14 0 19 0;
+#X connect 14 1 4 1;
+#X connect 16 0 18 0;
+#X connect 18 0 2 0;
+#X connect 20 0 21 0;
+#X connect 21 0 12 0;
+#X restore 106 513 pd counter;
+#X obj 114 473 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 110 557 5 0 0 0 - - -;
+#X msg 164 483 0;
+#X msg 199 487 5;
+#X obj 185 573 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
@@ -649,6 +702,11 @@
 #X connect 48 0 47 0;
 #X connect 51 0 42 0;
 #X connect 52 0 44 0;
+#X connect 53 0 55 0;
+#X connect 53 1 58 0;
+#X connect 54 0 53 0;
+#X connect 56 0 53 1;
+#X connect 58 0 53 2;
 #X restore 919 169 pd round_mng;
 #X obj 919 149 route /round/count /round/reset;
 #N canvas 1055 224 500 634 global_controll 0;
@@ -657,14 +715,15 @@
 #X msg 93 183 1;
 #X floatatom 59 247 5 0 0 0 - - -;
 #X obj 60 293 s g_gain;
-#X obj 225 291 s g_reset;
-#X obj 57 93 route /s/master_vol /s/ef/reset /reset;
-#X connect 0 0 6 0;
+#X obj 57 93 route /s/master_vol /s/ef/reset /reset /s/scratch_rate
+;
+#X obj 252 302 s g_scratch_rate;
+#X connect 0 0 5 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
-#X connect 6 0 3 0;
-#X connect 6 2 5 0;
+#X connect 5 0 3 0;
+#X connect 5 3 6 0;
 #X restore 922 356 pd global_controll;
 #X floatatom 155 593 5 0 0 0 - - -;
 #N canvas 872 509 450 300 master_vol 0;
@@ -680,7 +739,7 @@
 #X connect 4 0 1 1;
 #X connect 4 0 5 0;
 #X restore 103 561 pd master_vol;
-#X obj 922 120 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 922 120 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 987 195 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -689,6 +748,16 @@
 #X obj 561 347 *;
 #X obj 687 216 delay 200;
 #X msg 594 92 \$1 200;
+#N canvas 227 322 450 300 global_spd 0;
+#X obj 113 61 inlet;
+#X obj 115 242 outlet;
+#X obj 276 79 r g_scratch_rate;
+#X obj 200 147 * 1;
+#X connect 0 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 1 0;
+#X restore 596 430 pd global_spd;
+#X floatatom 595 460 5 0 0 0 - - -;
 #X connect 0 0 32 0;
 #X connect 0 0 33 0;
 #X connect 0 0 34 0;
@@ -756,7 +825,7 @@
 #X connect 58 0 56 0;
 #X connect 60 0 61 0;
 #X connect 61 0 59 0;
-#X connect 63 0 15 1;
+#X connect 63 0 81 0;
 #X connect 66 0 74 0;
 #X connect 68 0 63 0;
 #X connect 69 0 76 0;
@@ -768,3 +837,5 @@
 #X connect 79 0 1 0;
 #X connect 79 0 4 0;
 #X connect 80 0 47 0;
+#X connect 81 0 82 0;
+#X connect 82 0 15 1;
